@@ -1,4 +1,4 @@
-baseurl = "https://clayyount.com"
+baseurl = "https://readduckliving.netlify.com/"
 languageCode = "en-us"
 title = "Homepage"
 [outputs]
