@@ -1,0 +1,77 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: directory
+  path: site/content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: site/content/about
+  label: About
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/raecomic
+  label: Raecomic
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/gallery
+  label: Gallery
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/contact
+  label: Contact
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/hamlets-danish-comic
+  label: Hamlets danish comic
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/blog
+  label: Blog
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/hamlets-danish
+  label: Hamlets danish
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/ghostcat-comics
+  label: Ghostcat comics
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/ghostcat-comics-archive
+  label: Ghostcat comics archive
+  create: all
+  match: "**/*"
+- type: directory
+  path: site/content/img
+  label: Img
+  create: all
+  match: "**/*"
+upload_dir: site/static/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.59.1
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+version: 0.59.1
